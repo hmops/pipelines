@@ -5,6 +5,10 @@ pipeline {
         stage('Say hello') {
             steps {
                 sh 'echo "hello from Jenkins 2" >> helloJenkins'
+                sh '''
+                    echo "run multiple commands"
+                    ls -lah
+                '''
             }
         }
     }
